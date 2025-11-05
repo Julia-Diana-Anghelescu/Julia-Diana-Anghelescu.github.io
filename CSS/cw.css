@@ -1,0 +1,85 @@
+h1 {
+    color:rgb(103, 164, 103);
+    background-color:rgb(149, 244, 152);
+        /* the main font is Momo Signature from Google Fonts */
+        font-family: "Momo Signature","Lucida Handwriting", cursive;
+        font-weight: 400;
+        font-style: normal;
+}
+
+#heading1 {
+    color:rgb(136, 123, 221);
+}
+
+.text-pink{
+    color:rgb(244, 103, 192);
+}
+
+.text-para {
+    text-align: center;
+}
+.text-background-yellow{
+    background-color:rgb(244, 229, 60);
+}
+
+h2 {
+    color:rgb(225, 203, 61);
+}
+
+h3 {
+    color:rgb(0, 0, 0);
+}   
+/* VARIABLES */
+:root {
+    --primary-red: #dc3545;
+    --just-red: #e17777;
+    --dark-red: #a71d2a;
+
+/* turning an a tag into a button- using the variable to color the button */
+a{color:black;
+    text-decoration: none;
+    background-color: var(--just-red);
+    padding: 20px 10px 20px 10px;
+    border-radius: 4px;
+    margin-left:50px; 
+}
+/* turning adding a hover state for the a tag */
+a:hover {color:rgb(255, 255, 255);
+    background-color: var(--dark-red);
+    transition: background-color 1.9s ease;}
+
+
+a:link {color:rgb(255, 0, 255);} 
+a:visited {color:rgb(148, 153, 0);}
+
+/* this is a meadia bg change under 600px an an example for responsive design*/
+@media (max-width: 600px) {
+    body{
+        background-color: lightblue;
+    }
+}
+
+
+}
+body{
+    background-image: url("../Assets/img/Me.png");
+    /* the main font is Momo Signature from Google Fonts, the "lucida... is the backup font */
+        font-family: "Momo Signature", "Lucida Handwriting", cursive;
+        font-weight: 400;
+        font-style: normal;
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+    background-size: 100px;
+    color:rgb(239, 163, 33)
+}
+
+h1{
+    font-size: 3.8rem;
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: rgb(64, 135, 64);
+    text-transform: uppercase;
+    
+
+}
