@@ -1,0 +1,100 @@
+/*  ----------------------------- */
+/*  ------ COLOR VARIABLES ------ */
+/*  ----------------------------- */
+:root {
+    /* oranges */
+    --primary-orange: #CB8B65;
+    --dark-orange: #6D4B39;
+    --medium-orange: #E5C5B2;
+    --light-orange: #F5E8E0;
+
+    /* greens */
+    --punchy-green:#005C48;
+    --dark-green:#013329;
+    --medium-green:#809994;
+    --light-green:#C0CCCA;
+
+    /* neutrals*/
+    --beige: #E4DCD1;
+    --white: #FFFFFF;
+    --black: #100B0D;
+    }
+
+/*  ----------------------------- */
+/*  ------- GLOBAL STYLES ------- */
+/*  ----------------------------- */
+body {
+    font-family: 'Source Sans 3', sans-serif;
+    color: var(--dark-green);
+    background-color: var(--white);
+    line-height: 1.6;
+    }
+
+h1, h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: var(--dark-green);
+    }
+
+h3, h4, h5, h6 {
+    font-family: 'Lora', serif;
+    color: var(--dark-green);
+    }
+
+/*  ----------------------------- */
+/*  ---------  NAVBAR  ---------- */
+/*  ----------------------------- */
+.navbar {
+    background-color: var(--white);
+    padding: 0.75rem 0;
+    }
+
+.nav-pills .nav-link {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark-green);
+    border-radius: 0.25rem;
+    transition: all 0.3s ease;
+    }
+
+.nav-pills .nav-link.active {
+    background-color: var(--punchy-green);
+    color: var(--white);
+    }
+
+.nav-pills .nav-link:hover {
+    background-color: var(--light-green);
+    color: var(--dark-green);
+    }
+
+/* ----------------------------- */
+/* ---------- BUTTONS ---------- */
+/* ----------------------------- */
+.btn-primary-mystyle {
+    background-color: var(--dark-green);
+    color: var(--white);
+    
+    }
+
+.btn-primary-mystyle:hover {
+    background-color: var(--punchy-green);
+    color: var(--white);
+    }
+
+/*  ----------------------------- */
+/*  ----------  CARDS  ---------- */
+/*  ----------------------------- */
+.card {
+    border: 1px solid var(--black);
+    border-radius: 0.5rem;
+    }
+
+.card-title {
+    color: var(--punchy-green);
+    border-radius: 0.5rem;
+    transition: background-color 1.9s ease;
+    }
+
+/* background fills */
+.bg-light-green { background-color: var(--light-green);}
+.bg-beige { background-color: var(--beige);}
+.bg-orange { background-color: var(--light-orange);}
