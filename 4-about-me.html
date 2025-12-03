@@ -30,81 +30,216 @@
 <!-----------HEAD ABOVE BODY BELOW---------->
 <!------------------------------------------>
 <body>
+  <!-- Spacer so content isn't under the navbar -->
+  <div class="page-top-space"></div>
 
-<div class="page-top-space"></div>
+  <!-- NAV BAR -->
+  <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+    <div class="container">
 
-<!-- NAV BAR -->
-<nav class="navbar navbar-expand-lg fixed-top shadow-sm">
-  <div class="container">
+      <!-- LEFT GROUP — Logo + Title (desktop layout) -->
+      <div class="d-flex align-items-center nav-left">
 
-    <!-- LEFT GROUP — Logo + Title (desktop layout) -->
-    <div class="d-flex align-items-center nav-left">
+        <!-- Logo -->
+        <img 
+          src="Assets/img/JA - Logo.png"
+          alt="JA Logo"
+          class="nav-logo-img"
+        />
 
-      <!-- Logo -->
-      <img 
-        src="Assets/img/JA - Logo.png"
-        alt="JA Logo"
-        class="nav-logo-img"
-      />
+        <!-- Name + Subtitle -->
+        <div class="nav-title ms-2">
+          <span class="fw-bold nav-name">Julia Anghelescu</span><br>
+          <span class="nav-subtitle">UX Design & Artist Portfolio</span>
+        </div>
 
-      <!-- Name + Subtitle -->
-      <div class="nav-title ms-2">
-        <span class="fw-bold nav-name">Julia Anghelescu</span><br>
-        <span class="nav-subtitle">UX Design & Artist Portfolio</span>
+      </div>
+
+      <!-- HAMBURGER BUTTON -->
+      <button class="navbar-toggler" 
+              type="button" 
+              data-bs-toggle="collapse" 
+              data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- NAV LINKS -->
+      <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+        <ul class="nav nav-pills align-items-lg-center">
+
+          <!-- HOME -->
+          <li class="nav-item">
+            <a class="nav-link" href="1-index.html">Home</a>
+          </li>
+
+          <!-- UX PROJECTS -->
+          <li class="nav-item dropdown">
+            <a class="nav-link d-flex align-items-center dropdown-toggle"
+              href="2-ux-projects.html"
+              id="uxProjectsLink"
+              data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <span class="flex-grow-1">UX Projects</span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="uxProjectsLink">
+              <li><a class="dropdown-item" href="2.1-Travel-Babble.html">Travel Babble</a></li>
+              <li><a class="dropdown-item" href="#">Project Placeholder 1</a></li>
+              <li><a class="dropdown-item" href="#">Project Placeholder 2</a></li>
+              <li><a class="dropdown-item" href="#">Project Placeholder 3</a></li>
+            </ul>
+          </li>
+
+          <!-- FASHION & ART -->
+          <li class="nav-item">
+            <a class="nav-link" href="3-fashion-and-art-projects.html">Fashion & Art</a>
+          </li>
+
+          <!-- ABOUT ME -->
+          <li class="nav-item">
+            <a class="nav-link active" href="4-about-me.html">About Me</a>
+          </li>
+
+        </ul>
       </div>
 
     </div>
+  </nav>
 
-    <!-- HAMBURGER BUTTON (only one!) -->
-    <button class="navbar-toggler" 
-            type="button" 
-            data-bs-toggle="collapse" 
-            data-bs-target="#mainNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <!-- MAIN ABOUT SECTION -->
+  <section id="about" class="about-section page-top-space">
+    <div class="container">
 
-    <!-- NAV LINKS -->
-    <div class="collapse navbar-collapse justify-content-end" id="mainNav">
-      <ul class="nav nav-pills align-items-lg-center">
+      <!-- About title + subtitle -->
+      <div class="text-center mb-4">
+        <h1 class="section-title-lg text-dark-green">About Me</h1>
+        <p class="section-subtitle text-medium-green">
+          From Fashion Systems to Human-Centered Digital Experiences
+        </p>
+      </div>
 
-        <!-- HOME -->
-        <li class="nav-item">
-          <a class="nav-link" href="1-index.html">Home</a>
-        </li>
+      <!-- Top illustration -->
+      <div class="row justify-content-center mb-4">
+        <div class="col-12 text-center">
+          <img
+            src="Assets/img/about/about image.png"
+            class="img-fluid about-hero-img"
+            alt="Illustration showing a transition from fashion tools (thread and scissors) to UX workflows with wireframes, 
+            user flows, and interface layouts in a green and orange color palette."
+          >
+        </div>
+      </div>
 
-        <!-- UX PROJECTS -->
-        <li class="nav-item dropdown">
-          <a class="nav-link d-flex align-items-center dropdown-toggle"
-             href="2-ux-projects.html"
-             id="uxProjectsLink"
-             data-bs-toggle="dropdown"
-             aria-expanded="false">
-             <span class="flex-grow-1">UX Projects</span>
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="uxProjectsLink">
-            <li><a class="dropdown-item" href="2.1-Travel-Babble.html">Travel Babble</a></li>
-            <li><a class="dropdown-item" href="#">Project Placeholder 1</a></li>
-            <li><a class="dropdown-item" href="#">Project Placeholder 2</a></li>
-            <li><a class="dropdown-item" href="#">Project Placeholder 3</a></li>
-          </ul>
-        </li>
+      <!-- Text + profile layout -->
+      <div class="row align-items-center g-4">
 
-        <!-- FASHION & ART -->
-        <li class="nav-item">
-          <a class="nav-link" href="3-fashion-and-art-projects.html">Fashion & Art</a>
-        </li>
+        <!-- 2/3 TEXT -->
+        <div class="col-lg-8">
+          <h2 class="about-title text-dark-green">User Experience Designer</h2>
+          <p class="about-subtitle text-medium-green">
+            Technical Fashion Designer turned UX Designer
+          </p>
 
-        <!-- ABOUT ME -->
-        <li class="nav-item">
-          <a class="nav-link active" href="4-about-me.html">About Me</a>
-        </li>
+          <div class="about-body text-dark-green">
+            <p>
+              I'm a UX designer with a background in fashion design, and my transition into the digital space has been shaped
+              by a long-standing interest in clarity, thoughtful problem-solving, and understanding how people interact with 
+              the world around them. In fashion, my work often revolved around translating ideas into precise specifications, 
+              communicating across teams, and ensuring that each detail supported the larger vision. Those experiences taught 
+              me the importance of being clear, dependable, and honest about what a design needs in order to succeed.
+            </p>
 
-      </ul>
+            <p>
+              What ultimately drew me toward UX was a desire to explore human behavior more deeply. I became fascinated by the 
+              points where users struggle, the moments when an interface quietly supports them, and the opportunities where a 
+              system can be reshaped to feel more intuitive. I enjoy the challenge of untangling those experiences—looking 
+              closely at what people need, understanding the logic behind their decisions, and turning that understanding into 
+              meaningful interactions.
+            </p>
+
+            <p>
+              My background makes me comfortable navigating complexity with a balance of structure and creativity. I approach 
+              design with intention, guided by careful analysis but open to exploration and collaboration. Working closely with 
+              developers, researchers, and stakeholders has reinforced how essential shared understanding is, and how the best 
+              solutions often emerge from teams who communicate openly and build on each other's strengths.
+            </p>
+
+            <p>
+              What motivates me most is designing experiences that feel connected—interfaces that anticipate users' intentions, 
+              reduce friction, and make information approachable. Good design should feel effortless, and achieving that requires 
+              attention, care, and a willingness to refine continuously. Each project challenges me to grow, to think more 
+              critically, and to deepen my craft.
+            </p>
+
+            <p>
+              Over the past eight years, I've worked across multiple design disciplines, each one shaping how I think, work, and 
+              collaborate. I hold a UX Design certificate from Concordia University and an undergraduate degree in Design (Fashion 
+              with Honors) from TMU (formerly Ryerson). My journey has been defined by curiosity, steady growth, and a genuine 
+              commitment to creating digital experiences that help people move through their tasks with clarity and confidence.
+            </p>
+          </div>
+        </div>
+
+        <!-- 1/3 PROFILE PHOTO -->
+        <div class="col-lg-4">
+          <div class="about-photo-wrapper text-center">
+            <img
+              src="Assets/img/Me.png"
+              alt="Portrait of Julia Anghelescu, UX designer."
+              class="about-profile-photo img-fluid"
+            >
+          </div>
+        </div>
+
+      </div> <!-- end row -->
+
+    </div> <!-- end container -->
+  </section>
+
+<!-- ====================================== -->
+<!-- ABOUT HIGHLIGHTS: PHILOSOPHY & GROWTH -->
+<!-- ====================================== -->
+<br>
+<br>
+<section class="about-highlight-section">
+  <div class="container">
+    <div class="row g-4">
+
+      <!-- Design Philosophy -->
+      <div class="col-md-6">
+        <div class="card h-100 p-3 text-start about-card-orange">
+          <h5 class="card-title">
+            <i class="bi bi-compass me-2"></i> Design philosophy
+          </h5>
+          <p class="card-text">
+            I believe design should make complex things feel simple without oversimplifying them.
+            My work is grounded in understanding how people think, what they need, and where they
+            might get stuck. I aim for interfaces that reduce friction, communicate clearly, and
+            respect users’ time, while still leaving room for personality and visual warmth.
+          </p>
+        </div>
+      </div>
+
+      <!-- Currently Exploring -->
+      <div class="col-md-6">
+        <div class="card h-100 p-3 text-start about-card-orange">
+          <h5 class="card-title">
+            <i class="bi bi-mortarboard me-2"></i> What I'm currently exploring
+          </h5>
+          <p class="card-text">
+            I’m currently completing a master’s degree with a focus on UX to strengthen the
+            foundations that support better collaboration—especially around programming concepts
+            and CSS, so discussions with developers are precise and productive. I’m also exploring
+            AI in a mindful way: I create my own work first, then use AI to stress-test ideas,
+            surface edge cases, and challenge my assumptions. Alongside this, I stay up to date
+            with evolving tools like Figma and design systems, so my process, and the teams I work
+            with, can take full advantage of new capabilities without losing clarity or control.
+          </p>
+        </div>
+      </div>
+
     </div>
-
   </div>
-</nav>
-
+</section>
 
 <!-- GPT recommended code to make the dropdown work-->
     <br>
