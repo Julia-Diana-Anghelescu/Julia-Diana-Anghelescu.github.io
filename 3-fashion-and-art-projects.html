@@ -1,54 +1,525 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Julia Anghelescu Portfolio</title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Julia Anghelescu Portfolio</title>
+    <link rel="shortcut icon" href="Assets/img/JA - Logo.png" type="image/png">
 
-        <!-- Bootstrap Core CSS -->
-        <link 
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
-        rel="stylesheet">
+    <!-- Bootstrap Core CSS -->
+    <link 
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
+      rel="stylesheet">
 
-        <!-- Bootstrap Icons -->
-        <link 
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" 
-        rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link 
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" 
+      rel="stylesheet">
 
-        <!-- Google Fonts -->
-        <link 
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&
-        family=Lora:wght@400;700&
-        family=Source+Sans+3:wght@400;600&display=swap" 
-        rel="stylesheet">
-        
-        <!-- Custom Styles -->
-        <link rel="stylesheet" href="CSS/mystyle.css">
+    <!-- Google Fonts: Montserrat + Raleway -->
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" 
+      rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="CSS/mystyle.css">
 </head>
-  <body>
 
-    <div class="containter text-center my-5">
-        <h1>Julia Anghelescu</h1>
-        <p class="lead">
-            UX Designer & Artist Portfolio
-        </p>
+<!------------------------------------------>
+<!-----------HEAD ABOVE BODY BELOW---------->
+<!------------------------------------------>
+
+<body>
+
+<div class="page-top-space"></div>
+
+<!-- NAV BAR -->
+<nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+  <div class="container">
+
+    <!-- LEFT GROUP — Logo + Title (desktop layout) -->
+    <div class="d-flex align-items-center nav-left">
+
+      <!-- Logo -->
+      <img 
+        src="Assets/img/JA - Logo.png"
+        alt="JA Logo"
+        class="nav-logo-img"
+      />
+
+      <!-- Name + Subtitle -->
+      <div class="nav-title ms-2">
+        <span class="fw-bold nav-name">Julia Anghelescu</span><br>
+        <span class="nav-subtitle">UX Design & Artist Portfolio</span>
+      </div>
+
     </div>
-<!--NAV BAR-->
-<nav class="navbar">
-  <div class="container justify-content-center">
-    <ul class="nav nav-pills">
-      <li class="nav-item">
-        <a class="nav-link " href="1-index.html">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="2-ux-projects.html">UX Projects</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link active" href="3-fashion-and-art-projects.html">Fashion & Art</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="4-about-me.html">About Me</a>
-      </li>
-    </ul>
+
+    <!-- HAMBURGER BUTTON (only one!) -->
+    <button class="navbar-toggler" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- NAV LINKS -->
+    <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+      <ul class="nav nav-pills align-items-lg-center">
+
+        <!-- HOME -->
+        <li class="nav-item">
+          <a class="nav-link" href="1-index.html">Home</a>
+        </li>
+
+        <!-- UX PROJECTS -->
+        <li class="nav-item dropdown">
+          <a class="nav-link d-flex align-items-center dropdown-toggle"
+             href="2-ux-projects.html"
+             id="uxProjectsLink"
+             data-bs-toggle="dropdown"
+             aria-expanded="false">
+             <span class="flex-grow-1">UX Projects</span>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="uxProjectsLink">
+            <li><a class="dropdown-item" href="2.1-Travel-Babble.html">Travel Babble</a></li>
+            <li><a class="dropdown-item" href="#">Project Placeholder 1</a></li>
+            <li><a class="dropdown-item" href="#">Project Placeholder 2</a></li>
+            <li><a class="dropdown-item" href="#">Project Placeholder 3</a></li>
+          </ul>
+        </li>
+
+        <!-- FASHION & ART -->
+        <li class="nav-item">
+          <a class="nav-link active" href="3-fashion-and-art-projects.html">Fashion & Art</a>
+        </li>
+
+        <!-- ABOUT ME -->
+        <li class="nav-item">
+          <a class="nav-link" href="4-about-me.html">About Me</a>
+        </li>
+
+      </ul>
+    </div>
+
   </div>
 </nav>
+
+    
+<!-------------------------------------->
+<!--------------CAROUSELS -------------->
+<!-------------------------------------->
+
+<!---------- PHYSICAL ART SECTION ------------------->
+<div class="art-section-bg">
+  <h1 class="section-title section-title-lg section-title-primary-orange">
+    Physical Art
+  </h1>
+  <p class="section-subtitle section-subtitle-dark-orange">
+    A collection of my original paintings, sculptures, and mixed-media pieces.
+  </p>
+
+
+  <div class="art-scroll-wrapper">
+
+    <!-- LEFT ARROW -->
+    <button class="art-scroll-btn art-scroll-left" type="button">
+      <span>&#10094;</span>
+    </button>
+
+    <!-- TRACK -->
+    <div class="art-scroll-track" id="artScrollTrack">
+
+      <!-- FALLING -->
+      <div class="art-card" data-img="Assets/img/Fashion&Art/physical/Falling.avif">
+        <div class="art-card-image">
+          <img src="Assets/img/Fashion&Art/physical/Falling.avif" 
+            alt="A turquoise-blue female figure diving downward against a textured abstract background in neutral tones.">
+        </div>
+        <div class="art-card-content">
+          <h4>Falling</h4>
+          <p>Acrylic palette-knife painting<br>36 × 48"</p>
+        </div>
+      </div>
+
+      <!-- SEARCH FOR GOD -->
+      <div class="art-card" data-img="Assets/img/Fashion&Art/physical/The Search for God.avif">
+        <div class="art-card-image">
+          <img src="Assets/img/Fashion&Art/physical/The Search for God.avif" 
+            alt=" 5 textured all white bas-relief featuring a hand in the middle, top-left a woman on a tower looking
+            at an empty frame, top-right a woman with  fabric wsweeping across her eyes, bottom-right a woman falling head 
+            first into water, bottom-left a woman praying.">
+        </div>
+        <div class="art-card-content">
+          <h4>The Search for God</h4>
+          <p>White gesso & textured bas relief<br>22 × 22"</p>
+        </div>
+      </div>
+
+      <!-- SPREADING LOVE -->
+      <div class="art-card" data-img="Assets/img/Fashion&Art/physical/Spreading Love From The Heart -Self Portrait.avif">
+        <div class="art-card-image">
+          <img src="Assets/img/Fashion&Art/physical/Spreading Love From The Heart -Self Portrait.avif" 
+            alt="A woman with exposed ribcage anatomy holding a dandelion, painted against a teal background with floating 
+            white seeds.">
+        </div>
+        <div class="art-card-content">
+          <h4>Spreading Love from the Heart</h4>
+          <p>Acrylic & gold leaf<br>16 × 20"</p>
+        </div>
+      </div>
+
+      <!-- GLASS HALF FULL -->
+      <div class="art-card" data-img="Assets/img/Fashion&Art/physical/Glass Half Full.avif">
+        <div class="art-card-image">
+          <img src="Assets/img/Fashion&Art/physical/Glass Half Full.avif" 
+            alt="A stylized woman with flowing pink hair holding a glass of wine, painted in soft watercolour tones.">
+        </div>
+        <div class="art-card-content">
+          <h4>Glass Half Full</h4>
+          <p>Watercolour, gold leaf & metallic marker<br>14 × 14"</p>
+        </div>
+      </div>
+
+      <!-- GLASS HALF EMPTY -->
+      <div class="art-card" data-img="Assets/img/Fashion&Art/physical/Glass Half Empty.avif">
+        <div class="art-card-image">
+          <img src="Assets/img/Fashion&Art/physical/Glass Half Empty.avif" 
+            alt="A tall watercolour figure seen from behind, wearing a dark dress with gold details and holding a spilled
+             wine glass aloft.">
+        </div>
+        <div class="art-card-content">
+          <h4>Glass Half Empty</h4>
+          <p>Watercolour, gold leaf & metallic marker<br>9 × 15"</p>
+        </div>
+      </div>
+
+      <!-- WINE DOESN'T MATTER -->
+      <div class="art-card" data-img="Assets/img/Fashion&Art/physical/Wine About It.avif">
+        <div class="art-card-image">
+          <img src="Assets/img/Fashion&Art/physical/Wine About It.avif" 
+          alt="Watercolour portrait of a woman blending elegance and surrealism, throwing a glass of wine into the air with 
+          bright contrasting colours">
+        </div>
+        <div class="art-card-content">
+          <h4>Wine Doesn't Matter</h4>
+          <p>Watercolour, gold leaf & metallic marker<br>8.5 × 19"</p>
+        </div>
+      </div>
+
+      <!-- CONQUERING THE DRAGON -->
+      <div class="art-card" data-img="Assets/img/Fashion&Art/physical/Conquering the Dragon.avif">
+        <div class="art-card-image">
+          <img src="Assets/img/Fashion&Art/physical/Conquering the Dragon.avif" 
+          alt="A Japanese-inspired watercolour illustration of a woman facing a stylized dragon-like figure, painted in muted 
+          greens and browns.">
+        </div>
+        <div class="art-card-content">
+          <h4>Conquering the Dragon</h4>
+          <p>Watercolour & ink<br>14 × 11"</p>
+        </div>
+      </div>
+
+      <!-- WOMAN WITH UMBRELLA -->
+      <div class="art-card" data-img="Assets/img/Fashion&Art/physical/Woman with Umbrella.avif">
+        <div class="art-card-image">
+          <img src="Assets/img/Fashion&Art/physical/Woman with Umbrella.avif" 
+            alt="A Japanese-inspired portrait of a woman holding a red parasol, painted in delicate watercolour tones.">
+        </div>
+        <div class="art-card-content">
+          <h4>Woman with Umbrella</h4>
+          <p>Watercolour & ink<br>11 × 14"</p>
+        </div>
+      </div>
+
+      <!-- TWO SISTERS -->
+      <div class="art-card" data-img="Assets/img/Fashion&Art/physical/Two Sisters.avif">
+        <div class="art-card-image">
+          <img src="Assets/img/Fashion&Art/physical/Two Sisters.jpg" 
+          alt="A layered paper sculpture wrapped around a glass vessel, depicting two stylized female figures 
+          intertwined in warm colours.">
+        </div>
+        <div class="art-card-content">
+          <h4>Two Sisters</h4>
+          <p>Layered paper sculpture on glass<br>7″ tall, 14″ circumference</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT ARROW -->
+    <button class="art-scroll-btn art-scroll-right" type="button">
+      <span>&#10095;</span>
+    </button>
+
+  </div>
+</div>
+
+<!-- LIGHTBOX POPUP -->
+<div id="artLightbox" class="art-lightbox-overlay">
+  <span class="art-lightbox-close">&times;</span>
+  <img id="artLightboxImg" class="art-lightbox-img">
+</div>
+
+<!-------------- DARK ALTER COLLECTION SECTION --------------------->
+
+<!-- DARK ALTER COLLECTION SECTION -->
+<div class="art-section-bg alt-section-bg">
+    <h1 class="section-title section-title-lg section-title-black">
+    Dark Alter Collection
+    </h1>
+    <p class="section-subtitle section-subtitle-black">
+      A moody prom capsule for alt girls who prefer buckles, sequins, and attitude over satin and tiaras.
+    </p>
+
+  <div class="art-scroll-wrapper">
+
+    <!-- LEFT ARROW -->
+    <button class="art-scroll-btn art-scroll-left dark-scroll-left" type="button">
+      <span>&#10094;</span>
+    </button>
+
+    <!-- HORIZONTAL TRACK -->
+    <div class="art-scroll-track" id="darkArtScrollTrack">
+
+      <!-- 1. BUCKLED BANJI -->
+      <div class="art-card dark-art-card">
+        <div class="dark-art-card-images">
+          <img src="Assets/img/Fashion&Art/Dark Alter/Da- buckle1.jpg"
+               alt="Front three-quarter view of Ruby Rea wearing the 'Buckled Banji' alternative prom dress with adjustable straps, fitted bodice, and flowing black lace skirt, styled with dark makeup and tattoos. Hair by John Seo, makeup by Angela Lee, photographed by Stephen Loban.">
+          <img src="Assets/img/Fashion&Art/Dark Alter/Da- buckle2.jpg"
+               alt="Front view of Ruby Rea in the 'Buckled Banji' dress, showing the iridescent bodice, strap details, and layered sheer skirt against a dark studio backdrop of intersecting black lines. Hair by John Seo, makeup by Angela Lee, photographed by Stephen Loban.">
+          <img src="Assets/img/Fashion&Art/Dark Alter/Da- buckle3.jpg"
+               alt="Back view of Ruby Rea in the 'Buckled Banji' dress, highlighting the open back, pleated shoulder details, and long sheer train. Hair by John Seo, makeup by Angela Lee, photographed by Stephen Loban.">
+        </div>
+        <div class="art-card-content">
+          <h4>Buckled Banji Dress</h4>
+          <p>
+            Alternative prom dress with adjustable straps and a removable bottom lace flare.<br>
+            Model: Ruby Rea, Hair Artist: John Seo, MUA: Angela Lee, Photographer: Stephen Loban
+          </p>
+        </div>
+      </div>
+
+      <!-- 2. BROKEN BARBIE TOP W/ ZIPPED ZEDA -->
+      <div class="art-card dark-art-card">
+        <div class="dark-art-card-images">
+          <img src="Assets/img/Fashion&Art/Dark Alter/Da- pieces1.jpg"
+               alt="Front view of Randa Law wearing the 'Broken Barbie' pleather and reversible sequin crop top on mesh, paired with the 'Zipped Zeda' black skirt featuring a front slit and princess-seam zippers. Hair by John Seo, makeup by Angela Lee, photographed by Stephen Loban.">
+          <img src="Assets/img/Fashion&Art/Dark Alter/Da- pieces2.jpg"
+               alt="Side view of Randa Law in the 'Broken Barbie' top and 'Zipped Zeda' skirt, emphasizing the gridded cut-outs on the bodice and sleek leather skirt lines. Hair by John Seo, makeup by Angela Lee, photographed by Stephen Loban.">
+          <img src="Assets/img/Fashion&Art/Dark Alter/Da- pieces3.jpg"
+               alt="Angled full-body view of Randa Law in the 'Broken Barbie' top and 'Zipped Zeda' skirt, showcasing the edgy alt-prom silhouette against a graphic string backdrop. Hair by John Seo, makeup by Angela Lee, photographed by Stephen Loban.">
+        </div>
+        <div class="art-card-content">
+          <h4>Broken Barbie Top With Zipped Zeda Skirt</h4>
+          <p>
+            Pleather and reversible sequin top on mesh paired with a pleather skirt featuring zippers in the princess seams.<br>
+            Model: Randa Law, Hair Artist: John Seo, MUA: Angela Lee, Photographer: Stephen Loban
+          </p>
+        </div>
+      </div>
+
+      <!-- 3. PIECED PAIGE DRESS -->
+      <div class="art-card dark-art-card">
+        <div class="dark-art-card-images">
+          <img src="Assets/img/Fashion&Art/Dark Alter/Da- pierce3.jpg"
+               alt="Front view of Ruby Rea wearing the 'Pieced Paige' backless dress with cut-outs and pierced details created using grommets and O-rings, styled with a high alt updo and dramatic eye makeup. Hair by John Seo, makeup by Angela Lee, photographed by Stephen Loban.">
+          <img src="Assets/img/Fashion&Art/Dark Alter/Da- pierce1.jpg"
+               alt="Three-quarter view of Ruby Rea in the 'Pieced Paige' dress, highlighting the asymmetric hemline and sheer lace lower skirt. Hair by John Seo, makeup by Angela Lee, photographed by Stephen Loban.">
+          <img src="Assets/img/Fashion&Art/Dark Alter/Da- pierce2.jpg"
+               alt="Back view of Ruby Rea in the 'Pieced Paige' dress, focusing on the open back, intersecting strap details, and grommet-and-ring piercings. Hair by John Seo, makeup by Angela Lee, photographed by Stephen Loban.">
+        </div>
+        <div class="art-card-content">
+          <h4>Pieced Paige Dress</h4>
+          <p>
+            Backless body-suit style dress with piercings created using grommets and O-rings.<br>
+            Model: Ruby Rea, Hair Artist: John Seo, MUA: Angela Lee, Photographer: Stephen Loban
+          </p>
+        </div>
+      </div>
+
+      <!-- 4. RINGED REAGAN W/ STRIPPED STORM -->
+      <div class="art-card dark-art-card">
+        <div class="dark-art-card-images">
+          <img src="Assets/img/Fashion&Art/Dark Alter/Da- Jacket.jpg"
+               alt="Front view of Randa Law wearing the 'Ringed Reagan' knit-and-pleather top and mini skirt with removable garters, styled with the 'Stripped Storm' cropped jacket and high platform heels. Hair by John Seo, makeup by Angela Lee, photographed by Stephen Loban.">
+          <img src="Assets/img/Fashion&Art/Dark Alter/Da- Jacket2.jpg"
+               alt="Back view of Randa Law in the 'Ringed Reagan' outfit with 'Stripped Storm' jacket, revealing strap and ring details across the shoulders and spine. Hair by John Seo, makeup by Angela Lee, photographed by Stephen Loban.">
+          <img src="Assets/img/Fashion&Art/Dark Alter/Da- Jacket3.jpg"
+               alt="Front three-quarter view of Randa Law wearing the 'Ringed Reagan' top and skirt with visible ringed garters and cropped 'Stripped Storm' jacket, posed against a grey backdrop with intersecting black lines. Hair by John Seo, makeup by Angela Lee, photographed by Stephen Loban.">
+        </div>
+        <div class="art-card-content">
+          <h4>Ringed Reagan Dress With Stripped Storm Jacket</h4>
+          <p>
+            Assorted pair top and skirt with removable garters in knit and pleather, paired with the 'Stripped Storm' cropped jacket.<br>
+            Model: Randa Law, Hair Artist: John Seo, MUA: Angela Lee, Photographer: Stephen Loban
+          </p>
+        </div>
+      </div>
+
+      <!-- 5. MOHAWK MORIAH DRESS -->
+      <div class="art-card dark-art-card">
+        <div class="dark-art-card-images">
+          <img src="Assets/img/Fashion&Art/Dark Alter/Da- mohawk1.jpg"
+               alt="Front three-quarter view of Ruby Rea in the 'Mohawk Moriah' dress, featuring a reversible sequin bodice with pleated mohawk shoulders and layered black skirt. Hair styled in a blonde and teal mohawk by John Seo, makeup by Angela Lee, photographed by Stephen Loban.">
+          <img src="Assets/img/Fashion&Art/Dark Alter/Da- mohawk2.jpg"
+               alt="Front view of Ruby Rea wearing the 'Mohawk Moriah' dress, showing the strong shoulder silhouette and shimmering sequin bodice. Hair by John Seo, makeup by Angela Lee, photographed by Stephen Loban.">
+          <img src="Assets/img/Fashion&Art/Dark Alter/Da- mohawk3.jpg"
+               alt="Side view of Ruby Rea in the 'Mohawk Moriah' dress, emphasizing the sculpted mohawk shoulders, cinched waist, and flowing skirt layers. Hair by John Seo, makeup by Angela Lee, photographed by Stephen Loban.">
+        </div>
+        <div class="art-card-content">
+          <h4>Mohawk Moriah Dress</h4>
+          <p>
+            Reversible sequin bodice with pleated mohawk shoulders, pleather underskirt, and adjustable outer skirt.<br>
+            Model: Ruby Rea, Hair Artist: John Seo, MUA: Angela Lee, Photographer: Stephen Loban
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT ARROW -->
+    <button class="art-scroll-btn art-scroll-right dark-scroll-right" type="button">
+      <span>&#10095;</span>
+    </button>
+
+  </div>
+</div>
+
+
+
+<!---------------------------------------------------->
+<!---------------- JAVASCRIPTS ----------------------->
+<!---------------------------------------------------->
+
+
+<!--Make the dropdown work-->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+      <script>
+      document.getElementById("uxProjectsLink").addEventListener("click", function (e) {
+        const clickedText = e.target.closest(".flex-grow-1");
+        if (clickedText) {
+          // User clicked the text → navigate normally
+          window.location = "2-ux-projects.html";
+        } else {
+          // User clicked elsewhere on the button → open dropdown
+          e.preventDefault();
+        }
+      });
+      </script>
+
+<!---->
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  /* ---------------------------- */
+  /* PHYSICAL ART CAROUSEL       */
+  /* ---------------------------- */
+  const artTrack = document.getElementById("artScrollTrack");
+  const artCards = artTrack.querySelectorAll(".art-card");
+  let artStep = artCards[0].offsetWidth + 20;
+
+  const artLeft = document.querySelector(".art-scroll-left");
+  const artRight = document.querySelector(".art-scroll-right");
+
+  artLeft.addEventListener("click", () => {
+    artTrack.scrollBy({ left: -artStep, behavior: "smooth" });
+  });
+
+  artRight.addEventListener("click", () => {
+    artTrack.scrollBy({ left: artStep, behavior: "smooth" });
+  });
+
+
+  /* ---------------------------- */
+  /* DARK ALTER CAROUSEL         */
+  /* ---------------------------- */
+  const darkTrack = document.getElementById("darkArtScrollTrack");
+  const darkCards = darkTrack.querySelectorAll(".dark-art-card");
+  let darkStep = darkCards[0].offsetWidth + 20;
+
+  const darkLeft = document.querySelector(".dark-scroll-left");
+  const darkRight = document.querySelector(".dark-scroll-right");
+
+  darkLeft.addEventListener("click", () => {
+    darkTrack.scrollBy({ left: -darkStep, behavior: "smooth" });
+  });
+
+  darkRight.addEventListener("click", () => {
+    darkTrack.scrollBy({ left: darkStep, behavior: "smooth" });
+  });
+
+
+  /* ---------------------------- */
+  /* PHYSICAL ART LIGHTBOX       */
+  /* ---------------------------- */
+  const lightbox = document.getElementById("artLightbox");
+  const lightboxImg = document.getElementById("artLightboxImg");
+  const closeBtn = document.querySelector(".art-lightbox-close");
+
+  artCards.forEach(card => {
+    card.addEventListener("click", () => {
+      lightboxImg.src = card.dataset.img;
+      lightbox.classList.add("show");
+    });
+  });
+
+  closeBtn.addEventListener("click", () => {
+      lightbox.classList.remove("show");
+  });
+
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) lightbox.classList.remove("show");
+  });
+
+
+  /* ---------------------------- */
+  /* DARK ALTER LIGHTBOX         */
+  /* ---------------------------- */
+  const darkLightbox = document.getElementById("darkLightbox");
+  const darkLightboxImg = document.getElementById("darkLightboxImg");
+
+  const darkClose = document.querySelector(".dark-lightbox-close");
+  const darkPrev = document.querySelector(".dark-lightbox-prev");
+  const darkNext = document.querySelector(".dark-lightbox-next");
+
+  let darkIndex = 0;
+  let currentSet = [];
+
+  document.querySelectorAll(".dark-art-card").forEach(card => {
+    const imgs = Array.from(card.querySelectorAll("img")).map(img => img.src);
+
+    card.addEventListener("click", () => {
+      currentSet = imgs;
+      darkIndex = 0;
+      darkLightboxImg.src = currentSet[darkIndex];
+      darkLightbox.classList.add("show");
+    });
+  });
+
+  darkClose.addEventListener("click", () => {
+    darkLightbox.classList.remove("show");
+  });
+
+  darkPrev.addEventListener("click", () => {
+    darkIndex = (darkIndex - 1 + currentSet.length) % currentSet.length;
+    darkLightboxImg.src = currentSet[darkIndex];
+  });
+
+  darkNext.addEventListener("click", () => {
+    darkIndex = (darkIndex + 1) % currentSet.length;
+    darkLightboxImg.src = currentSet[darkIndex];
+  });
+
+  darkLightbox.addEventListener("click", (e) => {
+    if (e.target === darkLightbox) darkLightbox.classList.remove("show");
+  });
+
+});
+</script>
+
+
+  </body>
+</html>
