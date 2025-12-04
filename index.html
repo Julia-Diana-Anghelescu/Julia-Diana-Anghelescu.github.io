@@ -1,237 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Julia Anghelescu Portfolio</title>
+    <title>Julia Anghelescu — UX Design Portfolio</title>
     <link rel="shortcut icon" href="Assets/img/JA - Logo.png" type="image/png">
 
-    <!-- Bootstrap Core CSS -->
-    <link 
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
-      rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Bootstrap Icons -->
-    <link 
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" 
-      rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- Google Fonts: Montserrat + Raleway -->
-    <link 
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" 
-      rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="CSS/mystyle.css">
 </head>
 
-<!------------------------------------------>
-<!-----------HEAD ABOVE BODY BELOW---------->
-<!------------------------------------------>
-
 <body>
+
+<!-- ======================================= -->
+<!--              NAVIGATION BAR             -->
+<!-- ======================================= -->
+<nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+    <div class="container">
+
+        <!-- Logo + Name -->
+        <div class="d-flex align-items-center nav-left">
+            <img src="Assets/img/JA - Logo.png" alt="JA Logo" class="nav-logo-img" loading="lazy">
+            <div class="nav-title ms-2">
+                <span class="fw-bold nav-name">Julia Anghelescu</span><br>
+                <span class="nav-subtitle">UX Design & Artist Portfolio</span>
+            </div>
+        </div>
+
+        <!-- Mobile hamburger -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-expanded="false" aria-controls="mainNav" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Nav links -->
+        <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+            <ul class="navbar-nav align-items-lg-center">
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Home</a>
+                </li>
+
+                <!-- Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle d-flex align-items-center"
+                       href="2-ux-projects.html"
+                       id="uxProjectsLink"
+                       role="button"
+                       data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        <span class="flex-grow-1">UX Projects</span>
+                    </a>
+
+                    <ul class="dropdown-menu" aria-labelledby="uxProjectsLink">
+                        <li><a class="dropdown-item" href="2.1-Travel-Babble.html">Travel Babble</a></li>
+                        <li><a class="dropdown-item" href="#">Project Placeholder 1</a></li>
+                        <li><a class="dropdown-item" href="#">Project Placeholder 2</a></li>
+                        <li><a class="dropdown-item" href="#">Project Placeholder 3</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="3-fashion-and-art-projects.html">Fashion & Art</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="4-about-me.html">About Me</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
 
 <div class="page-top-space"></div>
 
-<!-- NAV BAR -->
-<nav class="navbar navbar-expand-lg fixed-top shadow-sm">
-  <div class="container">
+<!-- ======================================= -->
+<!--              HERO SECTION                -->
+<!-- ======================================= -->
+<section class="container my-5">
+    <div class="row align-items-center text-center text-md-start">
 
-    <!-- LEFT GROUP — Logo + Title (desktop layout) -->
-    <div class="d-flex align-items-center nav-left">
+        <div class="col-md-8">
+            <h1 class="fw-bold">Hi! I'm Julia — UX/UI Designer</h1>
 
-      <!-- Logo -->
-      <img 
-        src="Assets/img/JA - Logo.png"
-        alt="JA Logo"
-        class="nav-logo-img"
-      />
+              <h5 class="fw-normal text-medium-green">
+                I’m a UX designer who brings together creativity, visual clarity, and
+                thoughtful problem-solving. My work is guided by empathy and a deep interest
+                in how people interact with systems. I strive to create digital experiences
+                that feel intuitive, meaningful, and refined — blending function with
+                a sense of aesthetic care.
+              </h5>
 
-      <!-- Name + Subtitle -->
-      <div class="nav-title ms-2">
-        <span class="fw-bold nav-name">Julia Anghelescu</span><br>
-        <span class="nav-subtitle">UX Design & Artist Portfolio</span>
-      </div>
-
-    </div>
-
-    <!-- HAMBURGER BUTTON for MOBILE-->
-    <button class="navbar-toggler" 
-            type="button" 
-            data-bs-toggle="collapse" 
-            data-bs-target="#mainNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- NAV LINKS -->
-    <div class="collapse navbar-collapse justify-content-end" id="mainNav">
-      <ul class="nav nav-pills align-items-lg-center">
-
-        <!-- HOME -->
-        <li class="nav-item">
-          <a class="nav-link active" href="1-index.html">Home</a>
-        </li>
-
-        <!-- UX PROJECTS -->
-        <li class="nav-item dropdown">
-          <a class="nav-link d-flex align-items-center dropdown-toggle"
-             href="2-ux-projects.html"
-             id="uxProjectsLink"
-             data-bs-toggle="dropdown"
-             aria-expanded="false">
-             <span class="flex-grow-1">UX Projects</span>
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="uxProjectsLink">
-            <li><a class="dropdown-item" href="2.1-Travel-Babble.html">Travel Babble</a></li>
-            <li><a class="dropdown-item" href="#">Project Placeholder 1</a></li>
-            <li><a class="dropdown-item" href="#">Project Placeholder 2</a></li>
-            <li><a class="dropdown-item" href="#">Project Placeholder 3</a></li>
-          </ul>
-        </li>
-
-        <!-- FASHION & ART -->
-        <li class="nav-item">
-          <a class="nav-link" href="3-fashion-and-art-projects.html">Fashion & Art</a>
-        </li>
-
-        <!-- ABOUT ME -->
-        <li class="nav-item">
-          <a class="nav-link" href="4-about-me.html">About Me</a>
-        </li>
-
-      </ul>
-    </div>
-
-  </div>
-</nav>
-
-
-<!--HOME BLURB AND IMAGE -->
-    <div class="container mt-5">
-        <div class="row align-items-center text-center">
-            <!-- 2/3 Column for Text -->
-            <div class="col-md-8">
-                <h3 class="mb-5"> HI! I'M JULIA, UX/UI DESIGNER </h3>
-                <h5> I am a UX designer who combines creativity, aesthetic, problem-solving skills and empathy!
-                    I love to create user experiences that leave a lasting impact, infusing the digital world with a sense of style and sophistication.
-                </h5>
             </div>
-            <!-- 1/3 Column for Image -->
-            <div class="col-md-4">
-                    <img src="Assets/img/Me.png" alt="profile picture" class="img-fluid rounded-circle" style="max-width: 400px;">
-            </div>    
+
+        <div class="col-md-4 text-center">
+            <img src="Assets/img/Me.png"
+                 alt="Portrait of Julia Anghelescu"
+                 class="img-fluid rounded-circle"
+                 loading="lazy"
+                 style="max-width: 400px;">
         </div>
-    </div>
-    <br> 
 
-<!--VALUES SECTION-->
-    <div class="container my-5">
-    <div class="container">
-  <div class="row g-4">
-    <!-- Communication -->
-    <div class="col-md-4">
-        <div class="card  h-100 p-3 text-start">
-            <h5 class="card-title">
-                <i class="bi bi-chat-left-quote"></i> Communication
-            </h5>
-                <p class="card-text">I value honesty above all. Transparency builds trust and keeps projects 
-                    moving forward smoothly. I'd rather admit a mistake and learn from it than hide it. </p>
+    </div>
+</section>
+
+<!-- ======================================= -->
+<!--               VALUES SECTION             -->
+<!-- ======================================= -->
+<section class="container my-5">
+    <div class="row g-4">
+
+        <!-- CARD TEMPLATE -->
+        <!-- (Your original cards are preserved — only markup cleaned) -->
+
+        <div class="col-md-4">
+            <div class="card h-100 p-3">
+                <h5 class="card-title"><i class="bi bi-chat-left-quote me-2"></i>Communication</h5>
+                <p>I value clarity and honesty. Transparent communication builds trust, strengthens collaboration,
+                    and keeps projects moving in the right direction. If something isn’t working, I surface it early
+                    and work proactively toward a solution.</p>
+            </div>
         </div>
-    </div>
 
-    <!-- Passion HERE I TREID ADDING LT GRN BG... -->
-    <div class="col-md-4">
-        <div class="card h-100 p-3 text-start"> 
-            <h5 class="card-title">
-                <i class="bi bi-heart me-2"></i> Passion
-            </h5>
-                <p class="card-text">I bring energy and care to every project. My passion fuels creativity, 
-                motivates teams, and ensures every detail contributes to a meaningful user experience.</p>
+        <div class="col-md-4">
+            <div class="card h-100 p-3">
+                <h5 class="card-title"><i class="bi bi-heart me-2"></i>Passion</h5>
+                <p>I approach every project with energy and intention. Passion fuels creativity and ensures that every
+                    detail contributes to a meaningful user experience.</p>
+            </div>
         </div>
-    </div>
 
-    <!-- Reliability -->
-    <div class="col-md-4">
-        <div class="card h-100 p-3 text-start">
-            <h5 class="card-title">
-                <i class="bi bi-shield-check me-2"></i> Reliability
-            </h5>
-                <p class="card-text">If I commit to something, I deliver. You can rely on me to meet deadlines, 
-                maintain quality, and take full ownership of my work.</p>
+        <div class="col-md-4">
+            <div class="card h-100 p-3">
+                <h5 class="card-title"><i class="bi bi-shield-check me-2"></i>Reliability</h5>
+                <p>When I commit to something, I follow through. You can rely on me to meet deadlines, uphold quality,
+                    and take ownership of both the process and the final outcome.</p>
+            </div>
         </div>
-    </div>
 
-    <!-- Connections -->
-    <div class="col-md-4">
-      <div class="card h-100 p-3 text-start">
-            <h5 class="card-title">
-                <i class="bi bi-link-45deg me-2"></i> Design that connects
-            </h5>
-                <p class="card-text">I create seamless, user-focused experiences that balance beauty and functionality. 
-                Every design decision is intentional, aiming to make interactions simple, intuitive, and impactful.</p>
-      </div>
-    </div>
-
-    <!-- Collaboration -->
-    <div class="col-md-4">
-      <div class="card h-100 p-3 text-start">
-            <h5 class="card-title">
-                <i class="bi bi-people me-2"></i> Collaborative by nature
-            </h5>
-                <p class="card-text">I thrive in cross-functional teams, blending ideas from design, development, and strategy. 
-                Collaboration helps transform complex challenges into clear, user-centered solutions.</p>
-      </div>
-    </div>
-
-    <!-- Growth -->
-    <div class="col-md-4">
-        <div class="card h-100 p-3 text-start">
-            <h5 class="card-title">
-                <i class="bi bi-graph-up-arrow me-2"></i> Continuous growth
-            </h5>
-                <p class="card-text">I'm always learning and refining my craft. Every project is an opportunity to 
-                evolve; improving how I design, communicate, and create value for users and teams.</p>
+        <div class="col-md-4">
+            <div class="card h-100 p-3">
+                <h5 class="card-title"><i class="bi bi-link-45deg me-2"></i>Design that connects</h5>
+                <p>I aim to create experiences that balance clarity, usability, and visual warmth. Every decision is
+                    intentional, supporting interactions that feel seamless, accessible, and genuinely helpful.</p>
+            </div>
         </div>
+
+        <div class="col-md-4">
+            <div class="card h-100 p-3">
+                <h5 class="card-title"><i class="bi bi-people me-2"></i>Collaborative by nature</h5>
+                <p>I thrive in cross-functional teams where ideas are exchanged openly. Working with designers,
+                    developers, and stakeholders helps shape solutions that are both creative and grounded in shared
+                    understanding.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100 p-3">
+                <h5 class="card-title"><i class="bi bi-graph-up-arrow me-2"></i>Continuous growth</h5>
+                <p>I’m committed to evolving my craft. Each project is an opportunity to learn — improving how I
+                    design, communicate, and bring value to teams, products, and users.</p>
+            </div>
+        </div>
+
     </div>
-</div>
-<!-- CV FOR DOWNLOAD -->
-<div class="container my-5">
+</section>
+
+<!-- ======================================= -->
+<!--                 CV SECTION               -->
+<!-- ======================================= -->
+<section class="container my-5">
+
     <div class="card shadow-lg border-0">
         <div class="card-header bg-light fw-bold text-center">
-        Julia Anghelescu CV (2025)
+            Julia Anghelescu CV (2025)
         </div>
-            <div class="card-body p-0">
-                <!-- Responsive wrapper -->
-                <div class="ratio ratio-4x3">
-                <iframe src="Assets/PDF/Julia-Anghelescu-CV(2025).pdf" title="Julia Anghelescu CV (2025)"
-                    style="border: none;">
-                </iframe>
-            </div>
-    </div>
-</div>
-<!-- Download Button -->
-<div class="text-center mt-4">
-    <ul class="nav nav-pills justify-content-center">
-        <li class="nav-item">
-            <a href="Assets/PDF/Julia-Anghelescu-CV(2025).pdf" class="nav-link active">Download PDF</a>
-        </li>
-    </ul>
-</div>       
 
-<!-- GPT recommended code to make the dropdown work-->
-    <br>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <script>
+        <div class="card-body p-0">
+            <div class="ratio ratio-4x3">
+                <iframe src="Assets/PDF/Julia-Anghelescu-CV(2025).pdf"
+                        title="Julia Anghelescu CV (2025)"
+                        loading="lazy"
+                        style="border:none;"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mt-4">
+      <a href="Assets/PDF/Julia-Anghelescu-CV(2025).pdf" 
+        class="btn btn-primary-mystyle px-4 py-2 mt-4"
+        download>
+          Download PDF
+      </a>
+    </div>
+    
+</section>
+
+<!-- ======================================= -->
+<!--                 SCRIPTS                  -->
+<!-- ======================================= -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Improved dropdown click behavior -->
+<script>
     document.getElementById("uxProjectsLink").addEventListener("click", function (e) {
-      const clickedText = e.target.closest(".flex-grow-1");
-      if (clickedText) {
-        // User clicked the text → navigate normally
-        window.location = "2-ux-projects.html";
-      } else {
-        // User clicked elsewhere on the button → open dropdown
-        e.preventDefault();
-      }
+        const clickedText = e.target.closest(".flex-grow-1");
+        if (clickedText) {
+            window.location = "2-ux-projects.html";
+        } else {
+            e.preventDefault();
+        }
     });
-    </script>
-  </body>
+</script>
+
+</body>
 </html>

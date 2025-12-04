@@ -1,6 +1,7 @@
-/* ========================================= */
-/* ============ GLOBAL VARIABLES =========== */
-/* ========================================= */
+/* ================================================== */
+/* ============ GLOBAL VARIABLES ==================== */
+/* EXTRA COLORS AS A PART OF THE PLAN FOR THE FUTURE  */
+/* ================================================== */
 
 :root {
   /* Oranges */
@@ -168,7 +169,7 @@ h1, h2, h3, h4, h5, h6 {
   width: auto;
 }
 
-/* ---------- MOBILE HEADER FIX ---------- */
+/* ---------- MOBILE HEADER ---------- */
 @media (max-width: 600px) {
   .navbar .container {
     display: grid !important;
@@ -209,6 +210,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ========================================= */
 /* ================= BUTTONS =============== */
+/*    CURRENTLY USED FOR DOWNLOAD PDF         */
 /* ========================================= */
 
 .btn-primary-mystyle {
@@ -236,7 +238,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: background-color 0.9s ease;
 }
 
-/* Background utility classes */
+/* Background PLANNING FOR FUTURE  */
 .bg-light-green { background-color: var(--light-green); }
 .bg-beige       { background-color: var(--beige); }
 .bg-orange      { background-color: var(--light-orange); }
@@ -244,6 +246,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ========================================= */
 /* ==== TRAVEL BABBLE COLORS & COMPONENTS == */
+/*   CREATED TO MATCH THE PROJECT BRANDING   */
+/* SOME NOT USED YET ... TO BE CONTINUED     */
 /* ========================================= */
 
 .TBproject-details-bg { background: linear-gradient(to bottom, #FEA049, #FFF0E8); }
@@ -291,6 +295,40 @@ h1, h2, h3, h4, h5, h6 {
 .TB-insight-label { font-weight: 600;  margin-bottom: 0.25rem; color: var(--black); }
 
 /* ========================================= */
+/*  ABOUT HIGHLIGHT CARDS – ORANGE THEME     */
+/* ========================================= */
+
+.highlight-card {
+    background: var(--light-orange);          /* lightest orange fill */
+    border: 2px solid var(--dark-orange);     /* dark orange border */
+    border-radius: 12px;
+    color: var(--dark-orange);                /* text color */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+/* Headings inside highlight cards */
+.highlight-card h5 {
+    color: var(--dark-orange);
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+/* Icons inherit dark orange */
+.highlight-card i {
+    color: var(--dark-orange) !important;
+    font-size: 1.25rem;
+}
+
+/* Paragraph text */
+.highlight-card p {
+    color: var(--dark-orange);
+    line-height: 1.5;
+}
+
+
+
+
+/* ========================================= */
 /* == FASHION & ART PROJECT (ART + ALTER) == */
 /* ========================================= */
 
@@ -301,13 +339,12 @@ h1, h2, h3, h4, h5, h6 {
   padding: 3rem 0;
 }
 
-/* Dark Alter: grey background + padding to match art section */
 .alt-section-bg {
   background: var(--grey);
   padding: 3rem 0;
 }
 
-/* ---------- Titles & subtitles (unified) ---------- */
+/* ---------- Titles & subtitles ---------- */
 
 .section-title {
   font-family: var(--font-heading);
@@ -317,12 +354,10 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
 }
 
-/* Size variants */
 .section-title-xl { font-size: var(--fs-xxl); }
 .section-title-lg { font-size: var(--fs-xl); }
 .section-title-md { font-size: var(--fs-lg); }
 
-/* Color variants */
 .section-title-primary-orange { color: var(--primary-orange); }
 .section-title-dark-orange   { color: var(--dark-orange); }
 .section-title-punchy-green  { color: var(--punchy-green); }
@@ -343,7 +378,6 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.5;
 }
 
-/* Color variants */
 .section-subtitle-dark-orange    { color: var(--dark-orange); }
 .section-subtitle-primary-orange { color: var(--primary-orange); }
 .section-subtitle-punchy-green   { color: var(--punchy-green); }
@@ -351,43 +385,39 @@ h1, h2, h3, h4, h5, h6 {
 .section-subtitle-black          { color: var(--black); }
 .section-subtitle-white          { color: var(--white); }
 
-/* ---------- Horizontal scroll wrappers ---------- */
+/* ========================================= */
+/*         HORIZONTAL SCROLL SECTIONS        */
+/* ========================================= */
 
+/* Unified wrapper for BOTH sections */
 .art-scroll-wrapper {
   position: relative;
   display: flex;
   align-items: center;
-
-  /* Make wrapper narrower than viewport and center it */
-  width: calc(100% - 4rem);   /* 2rem space on each side */
-  margin: 2rem auto 0;        /* top margin + auto left/right */
+  
+  width: 100%;            /* FULL WIDTH – no side leaks */
+  padding-left: 2rem;     /* bigger left padding */
+  padding-right: 0;       
+  margin-top: 2rem;
 }
 
+/* Track (cards) */
 .art-scroll-track {
   display: flex;
   gap: 2rem;
   overflow-x: auto;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
-
-  /* no extra padding needed, wrapper gives the inset */
-  padding: 0;
-
-  align-items: stretch;
-  min-height: 1px;
+  padding-right: 2rem;   /* ensures right-edge card spacing */
 }
 
-/* Hide scrollbar visually */
 .art-scroll-track::-webkit-scrollbar {
   display: none;
 }
 
-/* Arrows stay at wrapper edges */
-.art-scroll-left  { left: 0.5rem; }
-.art-scroll-right { right: 0.5rem; }
-
-
-/* ---------- Scroll arrows (base) ---------- */
+/* ========================================= */
+/*               UNIFIED ARROWS              */
+/* ========================================= */
 
 .art-scroll-btn {
   position: absolute;
@@ -395,51 +425,44 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(-50%);
   background: none;
   border: none;
-  font-size: 3rem;
-  cursor: pointer;
-  color: var(--dark-green);  /* Physical Art: green */
-  padding: 0;
-  z-index: 20;
-  transition: color 0.25s ease, transform 0.2s ease;
-}
 
-.art-scroll-btn span {
-  display: inline-block;
+  font-size: 3rem;
+  color: var(--black);      
+  cursor: pointer;
+
+  z-index: 20;
+  padding: 0;
+  line-height: 1;
+
+  transition: color 0.25s ease, transform 0.25s ease;
 }
 
 .art-scroll-btn:hover span {
-  color: var(--punchy-green);
-  transform: scale(1.05);
+  color: var(--primary-orange);
+  transform: scale(1.1);
 }
 
-.art-scroll-left  { left: 0.75rem; }
-.art-scroll-right { right: 0.75rem; }
+/* Left + right arrow positions */
+.physical-left,
+.dark-scroll-left {
+  left: 0.5rem;     /* ✔ small, consistent left placement */
+}
 
-/* Dark Alter arrow variants */
+.physical-right,
+.dark-scroll-right {
+  right: 0.5rem;    /* ✔ consistent right placement */
+}
 
+/* Remove old color overrides */
 .dark-scroll-left,
 .dark-scroll-right {
-  color: var(--light-orange);
-  padding: 0.1rem;
-  background: none;
-  border-radius: 0;
+  color: var(--black) !important;
 }
 
-/* Hover: bright orange */
-.dark-scroll-left:hover span,
-.dark-scroll-right:hover span {
-  color: var(--primary-orange);
-  transform: scale(1.08);
-}
 
-/* Active (click): dark orange */
-.dark-scroll-left:active span,
-.dark-scroll-right:active span {
-  color: var(--dark-orange);
-  transform: scale(0.98);
-}
-
-/* ---------- Base card component ---------- */
+/* ========================================= */
+/*               BASE ART CARD               */
+/* ========================================= */
 
 .art-card {
   flex: 0 0 auto;
@@ -456,7 +479,7 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
 }
 
-/* Shared content area */
+/* Content */
 .art-card-content {
   background: var(--white);
   padding: 1.2rem;
@@ -465,7 +488,7 @@ h1, h2, h3, h4, h5, h6 {
 .art-card-content h4 {
   font-family: var(--font-heading);
   color: var(--punchy-green);
-  margin: 0 0 0.4rem 0;
+  margin: 0 0 0.4rem;
   font-size: var(--fs-md);
 }
 
@@ -476,7 +499,9 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.4;
 }
 
-/* ---------- Physical Art – image layout ---------- */
+/* ========================================= */
+/*             PHYSCIAL ART CARDS            */
+/* ========================================= */
 
 .art-card-image {
   height: 80%;
@@ -484,14 +509,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  /* add breathing room around each artwork */
-  box-sizing: border-box;
-
-  margin: 0;
   background: var(--white);
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
   overflow: hidden;
 }
 
@@ -501,49 +519,71 @@ h1, h2, h3, h4, h5, h6 {
   object-fit: contain;
 }
 
-/* Physical Art content area height */
 .art-card:not(.dark-art-card) .art-card-content {
   height: 20%;
 }
 
-/* ---------- Dark Alter cards ---------- */
+/* ========================================== */
+/*             DARK ALTER CARDS               */
+/* HAD TO BE DIFFERNT FOR 3 IMAGES- NIGHTMARE */
+/* ========================================== */
 
+
+/* Whole card */
 .dark-art-card {
-  flex: 0 0 600px;
-  height: 520px;
-  border-radius: 14px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
-}
-
-/* Dark Alter image strip */
-.dark-art-card-images {
+  flex: 0 0 750px;            
+  width: 750px;
+  height: auto;
+  background: var(--white);
+  border: 1px solid var(--black);
+  border-radius: 16px;
+  overflow: hidden;
+  scroll-snap-align: start;
+  box-shadow: 0 4px 9px rgba(0,0,0,0.1);
   display: flex;
-  gap: 1px;
-  background: var(--black);
-  height: 65%;
+  flex-direction: column;
 }
 
+/* Top image strip */
+.dark-art-card-images {
+  width: 100%;
+  height: 380px;               
+  display: flex;
+  overflow: hidden;
+  background: var(--black);
+}
+
+/* Each of the 3 images */
 .dark-art-card-images img {
   width: 33.333%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover;           
+  object-position: center;
 }
 
-/* Dark Alter content tweaks */
+/* TEXT BLOCK — identical to Physical Art */
 .dark-art-card .art-card-content {
-  height: 35%;
   padding: 1.2rem;
+  background: var(--white);
 }
 
 .dark-art-card .art-card-content h4 {
-  color: var(--black);
+  margin: 0 0 0.4rem 0;
+  font-family: var(--font-heading);
+  font-size: var(--fs-md);
+  color: var(--black);        
 }
 
 .dark-art-card .art-card-content p {
-  color: var(--dark-orange);
+  margin: 0;
+  line-height: 1.4;
+  font-size: 1rem;
+  color: var(--dark-green);
 }
 
-/* ---------- Physical Art lightbox ---------- */
+/* ========================================= */
+/*             PHYSICAL LIGHTBOX             */
+/* ========================================= */
 
 .art-lightbox-overlay {
   display: none;
@@ -573,10 +613,11 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 3rem;
   color: var(--white);
   cursor: pointer;
-  font-weight: 300;
 }
 
-/* ---------- Dark Alter lightbox ---------- */
+/* ========================================= */
+/*             DARK ALTER LIGHTBOX           */
+/* ========================================= */
 
 .dark-lightbox-overlay {
   display: none;
@@ -596,7 +637,6 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 90vw;
   max-height: 90vh;
   object-fit: contain;
-  border-radius: 10px;
 }
 
 .dark-lightbox-close {
@@ -627,108 +667,106 @@ h1, h2, h3, h4, h5, h6 {
 .dark-lightbox-close:hover {
   color: var(--medium-orange);
 }
-
-/* ---------- Responsive tweaks (Fashion & Art) ---------- */
+/* ============================================================ */
+/* =====================  MOBILE FIXES  ======================== */
+/* THIS WAS BY FAR THE MOST DIFFICULT PART OF THE PROJECT      */
+/* HAD TO OVERRIDE A LOT OF STYLES SPECIFICALLY FOR MOBILE     */
+/* ============================================================ */
 
 @media (max-width: 600px) {
 
-  .art-card {
-    height: auto;
+      /* -------------------------------------------------------- */
+      /* ==========          DARK ALTER (MOBILE)        ========== */
+      /* -------------------------------------------------------- */
+
+      /* Only show the first image */
+      .dark-art-card-images img {
+          display: none !important;
+      }
+
+      .dark-art-card-images img:first-child {
+          display: block !important;
+          width: 100%;
+          height: auto !important;
+          object-fit: contain !important; /* no cropping */
+      }
+
+      .dark-art-card-images {
+          height: auto !important;
+      }
+
+      /* Card hugs the image size */
+      .dark-art-card {
+          width: auto !important;
+          max-width: 100% !important;
+          height: auto !important;
+          flex: 0 0 auto;
+          margin-right: 1rem;
+      }
+
+      .dark-art-card .art-card-content h4 {
+          font-size: 18px !important;
+      }
+
+      .dark-art-card .art-card-content p {
+          font-size: 16px !important;
+          line-height: 1.4;
+      }
+
+      /* Restore arrows */
+      .dark-scroll-left,
+      .dark-scroll-right {
+          font-size: 2rem !important;
+          display: block !important;
+          top: 45%;
+          color: var(--black) !important;
+          z-index: 120;
+      }
+
+  /* -------------------------------------------------------- */
+  /* ==========       PHYSICAL ART (MOBILE)         ========== */
+  /* -------------------------------------------------------- */
+
+  .art-card.physical-card {
+      width: 85% !important;
+      height: auto !important;
+      flex: 0 0 auto;
+      margin-right: 1rem;
   }
 
-  .art-card-content {
-    padding: 0.75rem 1rem;
+  /* IMAGE — FIX CROPPING */
+  .art-card.physical-card .art-card-image {
+      height: 220px !important;
   }
 
-  .art-card:not(.dark-art-card) .art-card-content h4 {
-    font-size: var(--fs-sm);
+  .art-card.physical-card .art-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain !important; /* <-- FIXES CROPPING */
   }
 
-  .dark-art-card {
-    flex: 0 0 90%;
-    height: auto;
+  .art-card.physical-card .art-card-content h4 {
+      font-size: 18px !important;
   }
 
-  .dark-art-card-images {
-    height: auto;
-    display: block;
+  .art-card.physical-card .art-card-content p {
+      font-size: 16px !important;
   }
 
-  .dark-art-card-images img {
-    display: none;
-  }
+  /* -------------------------------------------------------- */
+  /* ==========      UNIVERSAL MOBILE FIXES         ========== */
+  /* -------------------------------------------------------- */
 
-  .dark-art-card-images img:nth-child(1) {
-    display: block;
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-  }
-
-  .dark-art-card .art-card-content h4 {
-    font-size: var(--fs-sm);
-  }
-
-  .dark-art-card .art-card-content p {
-    font-size: 0.95rem;
-  }
-
-  .section-title,
-  .section-subtitle {
-    width: 90%;
-    margin-left: 1rem;
-    padding-right: 1rem;
+  .art-scroll-wrapper {
+      padding: 0 .5rem !important;
+      width: 100%;
   }
 
   .art-scroll-btn {
-    font-size: 2.4rem;
+      font-size: 2.2rem !important;
+      top: 45%;
+      color: var(--black) !important;
+      z-index: 120;
   }
 
-  .dark-scroll-left,
-  .dark-scroll-right {
-    font-size: 2.2rem;
-  }
-}
-
-/* ========================================= */
-/* ======== ABOUT HIGHLIGHT SECTION ======== */
-/* ========================================= */
-
-.about-highlight-section {
-  background-color: var(--light-orange);
-  padding: 3rem 0;
-}
-
-/* White cards with orange accents */
-.about-card-orange {
-  background-color: var(--white);
-  border: 1px solid var(--primary-orange);
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
-}
-
-.about-card-orange .card-title {
-  font-family: var(--font-heading);
-  font-size: var(--fs-md);
-  color: var(--dark-orange);
-  margin-bottom: 0.75rem;
-  display: flex;
-  align-items: center;
-}
-
-.about-card-orange .card-title i {
-  color: var(--primary-orange);
-}
-
-.about-card-orange .card-text {
-  font-family: var(--font-body);
-  font-size: var(--fs-base);
-  color: var(--dark-orange);
-  line-height: 1.6;
-}
-
-@media (max-width: 768px) {
-  .about-highlight-section {
-    padding: 2.5rem 0;
-  }
 }
