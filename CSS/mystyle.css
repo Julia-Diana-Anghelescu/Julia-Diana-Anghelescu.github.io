@@ -558,8 +558,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 33.333%;
   height: 100%;
   object-fit: cover;           
-  object-position: center;
-}
+  object-position: center;    
 
 /* TEXT BLOCK — identical to Physical Art */
 .dark-art-card .art-card-content {
@@ -768,5 +767,4 @@ h1, h2, h3, h4, h5, h6 {
       color: var(--black) !important;
       z-index: 120;
   }
-
 }
